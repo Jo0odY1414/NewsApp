@@ -69,8 +69,6 @@ public class StoryActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_story);
 
-        //ABI_KEY = getString(R.string.api_key) +"="+ getString(R.string.api_value);
-
         Intent intent = getIntent();
         SECTION_NAME = intent.getStringExtra(MainActivity.EXTRA_KEY_WORD);
 
@@ -86,6 +84,12 @@ public class StoryActivity extends AppCompatActivity
         // Set the adapter on the {@link ListView}
         // so the list can be populated in the user interface
         storyListView.setAdapter(mAdapter);
+
+        // Obtain a reference to the SharedPreferences file for this app
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        // And register to be notified of preference changes
+        // So we know when the user has adjusted the query settings
+        prefs.registerOnSharedPreferenceChangeListener(this);
 
         // Set an item click listener on the ListView, which sends an intent to a web browser
         // to open a website with more information about the selected story.
@@ -224,7 +228,7 @@ public class StoryActivity extends AppCompatActivity
         switch (item.getItemId()) {
             case R.id.action_search:
                 Intent searchIntent = new Intent(this, SearchActivity.class);
-                searchIntent.putExtra(EXTRA_KEY_WORD,SECTION_NAME);
+                searchIntent.putExtra(EXTRA_KEY_WORD, SECTION_NAME);
                 startActivity(searchIntent);
                 return true;
 

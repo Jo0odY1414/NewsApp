@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">News App</string>
+
+    <string name="news">The News</string>
+    
+    <string name="title">The title of story</string>
+    
+    <string name="type">The type of story</string>
+
+    <string name="authors">Author: N/A</string>
+
+    <string name="showing_results">Showing results</string>
+    
+    <string name="action_search">Search</string>
+    <string name="action_reset">Reset</string>
+
+    <string name="section_key" translatable="false">section</string>
+
+    <string name="world_news_label">World News</string>
+    <string name="world_news_value" translatable="false">world</string>
+
+    <string name="fashion_label">Fashion</string>
+    <string name="fashion_value" translatable="false">fashion</string>
+
+    <string name="sport_label">Sport</string>
+    <string name="sport_value" translatable="false">sport</string>
+
+    <string name="search_title">Search</string>
+
+    <!-- Strings For From-Date Preference  -->
+    <string name="search_by_from_date_label">Search From Date</string>
+    <string name="search_by_from_date_key" translatable="false">@string/from_date_key</string>
+    <string name="search_by_from_date_default" translatable="false">@string/from_date_key_default</string>
+
+    <!-- Strings For To-Date Preference -->
+    <string name="search_by_to_date_label">Search To Date</string>
+    <string name="search_by_to_date_key" translatable="false">@string/to_date_key</string>
+    <string name="search_by_to_date_default" translatable="false">@string/to_date_key_default</string>
+
+    <string name="from_date_lable">From Date</string>
+    <string name="from_date_key" translatable="false">from-date</string>
+    <string name="from_date_key_default" translatable="false">2017-10-05</string>
+
+    <string name="to_date_lable">To Date</string>
+    <string name="to_date_key" translatable="false">to-date</string>
+    <string name="to_date_key_default" translatable="false">2017-10-10</string>
+
+    <string name="api_key" translatable="false">api-key</string>
+    <string name="api_value" translatable="false">test</string>
+
+    <string name="no_story">No story found.</string>
+    <string name="no_internet_connection">No internet connection.</string>
+
+</resources>

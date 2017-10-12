@@ -19,6 +19,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -105,8 +106,13 @@ public class StoryActivity extends AppCompatActivity
                 // Create a new intent to view the story URI
                 Intent websiteIntent = new Intent(Intent.ACTION_VIEW, storyUri);
 
-                // Send the intent to launch a new activity
-                startActivity(websiteIntent);
+                if (websiteIntent.resolveActivity(getPackageManager()) != null) {
+                    // Send the intent to launch a new activity
+                    startActivity(websiteIntent);
+                } else
+                    Toast.makeText(getApplicationContext(),
+                            "You don't have any browser in your device", Toast.LENGTH_SHORT).show();
+
             }
         });
 
